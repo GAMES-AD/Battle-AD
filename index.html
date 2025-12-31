@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle City</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <button id="fullscreen-btn">FULLSCREEN</button>
+        
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div id="menu-screen" class="screen">
+                <h1>BATTLE CITY</h1>
+                <p>PROTECT THE BASE. DESTROY ENEMIES.</p>
+                <button id="start-button">START MISSION</button>
+                <div class="controls">
+                    WASD / ARROWS - MOVE<br>
+                    SPACE - SHOOT
+                </div>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1>MISSION FAILED</h1>
+                <p id="final-score">SCORE: 0</p>
+                <button id="restart-button">TRY AGAIN</button>
+            </div>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div class="d-pad">
+                <button id="btn-up" class="control-btn">▲</button>
+                <div class="d-pad-horizontal">
+                    <button id="btn-left" class="control-btn">◀</button>
+                    <button id="btn-right" class="control-btn">▶</button>
+                </div>
+                <button id="btn-down" class="control-btn">▼</button>
+            </div>
+            <button id="btn-shoot" class="control-btn">🔥</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
